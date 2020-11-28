@@ -1,0 +1,8 @@
+node {
+    stage('build'){
+      echo "This is m first pipeline job"
+    }
+    stage('test){
+      echo "This is a test for the build"
+    }
+}
