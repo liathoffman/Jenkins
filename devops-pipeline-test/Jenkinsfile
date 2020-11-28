@@ -1,8 +1,6 @@
-node {
-    stage('build'){
-      echo "This is my first pipeline job"
-    }
-    stage('test'){
-      echo "This is a test for the build"
-    }
+stage('build'){
+  echo "This is my first pipeline job"
+}
+stage('test'){
+  echo "This is a test for the build"
 }
