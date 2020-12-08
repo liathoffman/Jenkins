@@ -1,0 +1,5 @@
+node("master") {
+    stage("running docker") {
+        sh "docker run -t -d --rm training/webapp:latest"
+    }
+}

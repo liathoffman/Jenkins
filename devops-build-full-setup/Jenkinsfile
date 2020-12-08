@@ -1,0 +1,9 @@
+properties([parameters([choice(choices: ['enabled', 'disabled'], description: 'enable or disable deploy step', name: 'deploy')])])
+
+stage("paramcheck") {
+    if (params.deploy == "enabled") {
+        echo "deploy is enabled"
+    } else {
+        echo "deploy is disabled"
+    }
+}
