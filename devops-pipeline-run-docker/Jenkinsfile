@@ -1,0 +1,22 @@
+node("Linux") {
+    customImage = ""
+    stage("create dockerfile") {
+        sh """
+            tee Dockerfile <<-'EOF'
+              FROM ubuntu:latest
+              RUN touch file-01.txt
+EOF
+        """
+    }
+    stage("build docker") {
+    customImage = docker.build("liathoffman/app:latest")
+}
+    stage("verify dockers") {
+    sh "docker images"
+}
+    stage("push to Dokerhub") {
+        withDockerRegistry(credentialsId: '7e7b9a76-7ce5-4271-a9df-9928a2529f26') {
+    customImage.push()
+}
+}
+}
