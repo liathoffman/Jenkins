@@ -1,4 +1,4 @@
-node("master") {
+node("Linux") {
     stage("running docker") {
         sh "docker run -t -d --rm training/webapp:latest"
     }
