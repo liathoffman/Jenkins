@@ -3,6 +3,7 @@ properties([parameters([choice(choices: ['enabled', 'disabled'], description: 'e
 stage("paramcheck") {
     if (params.deploy == "enabled") {
         echo "deploy is enabled"
+        build 'devops-deploy-webapp'
     } else {
         echo "deploy is disabled"
     }
