@@ -9,7 +9,7 @@
     stages {
       stage('fetch_latest_code') {
         steps {
-          git credentialsId: '', url: ''
+          git branch: 'main', credentialsId: 'b0ab10d5-3ec2-4fe7-8e2e-4cbb8784e350', url: 'https://github.com/liathoffman/Jenkins.git'
         }
       }
 
