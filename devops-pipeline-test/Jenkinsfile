@@ -5,4 +5,5 @@ stage('build'){
 }
 stage('test'){
   echo "This is a test for the build"
+  echo "testing"
 }
