@@ -1,6 +1,7 @@
 stage('build'){
   echo "This is my first pipeline job"
   echo "I am updating it to see if it triggers a Jenkins build"
+  echo "will this build a job?"
 }
 stage('test'){
   echo "This is a test for the build"
