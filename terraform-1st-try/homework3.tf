@@ -34,7 +34,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "liat-terraform"
-    key    = "C:\\Users\\snugglebutt\\opsschool\\aws and terraform\\homework3\\terraform.tfstate"
+    key= "/terraform.tfstate"
     region = "us-east-1"
   }
 }
