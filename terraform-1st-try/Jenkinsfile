@@ -27,7 +27,7 @@
 
       stage('TF Init&Plan') {
         steps {
-          sh 'cd ${env.WORKSPACE}'
+          sh 'cd /home/ec2-user/workspace/terraform-2nd-try_main'
           sh 'terraform init'
           sh 'terraform plan'
         }      
