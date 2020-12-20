@@ -27,6 +27,7 @@
 
       stage('TF Init&Plan') {
         steps {
+          sh 'cd ${env.WORKSPACE}'
           sh 'terraform init'
           sh 'terraform plan'
         }      
