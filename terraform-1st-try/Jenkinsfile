@@ -43,7 +43,7 @@
 
       stage('TF Apply') {
         steps {
-          sh 'terraform apply -input=false -var-file=/home/ec2-user/terraform.tfvars'
+          sh 'terraform apply -input=false -var-file=/home/ec2-user/terraform.tfvars -auto-approve'
         }
       }
     } 
