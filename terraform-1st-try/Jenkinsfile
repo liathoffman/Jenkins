@@ -12,6 +12,18 @@
           git branch: 'main', credentialsId: 'b0ab10d5-3ec2-4fe7-8e2e-4cbb8784e350', url: 'https://github.com/liathoffman/Jenkins.git'
         }
       }
+    
+      stage('List files in repo on Unix Slave') {
+
+      when {
+        expression { isUnix() == true }
+      }
+
+      steps {      
+        echo "Workspace location: ${env.WORKSPACE}"    
+        sh 'ls -l'
+      }
+    }
 
       stage('TF Init&Plan') {
         steps {
